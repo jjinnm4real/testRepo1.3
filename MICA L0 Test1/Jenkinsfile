@@ -15,9 +15,8 @@ pipeline{
         
         stage ('Build') {
             steps {
-              dir("MICA L0 Test1"){
                     bat "dir.bat"
-                }    
+                  
                     
 
                 
