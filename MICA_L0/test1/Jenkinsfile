@@ -14,7 +14,7 @@ pipeline{
         
         stage ('Build') {
             steps {
-                dir('test1') {
+                dir('testRepo_v1.3/MICA_L0/test1') {
                     bat "dir.bat"
                     
 
