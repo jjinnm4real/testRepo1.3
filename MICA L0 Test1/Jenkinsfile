@@ -15,7 +15,9 @@ pipeline{
         
         stage ('Build') {
             steps {
-                bat "dir.bat"
+              dir("testRepo_v1.3"){
+                    bat "dir.bat"
+                }    
                     
 
                 
