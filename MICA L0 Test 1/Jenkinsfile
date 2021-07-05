@@ -8,7 +8,7 @@ pipeline{
         }
         stage ('Clone Repo'){
             steps {
-                dir ('testRepo_v1.3/MICA L0 Test1') {
+                dir ('workspace') {
                     sh "git clone https://github.com/jjinnm4real/testRepo_v1.3.git"
                 }    
             }
