@@ -8,19 +8,17 @@ pipeline{
         }
         stage ('Clone Repo'){
             steps {
-                dir ('workspace') {
-                    sh "git clone https://github.com/jjinnm4real/testRepo_v1.3.git"
-                }    
+                sh "git clone https://github.com/jjinnm4real/testRepo_v1.3.git"
+                    
             }
         }
         
         stage ('Build') {
             steps {
-                dir('MICA L0 Test 1') {
-                    bat "dir.bat"
+                bat "dir.bat"
                     
 
-                }    
+                
             }
         }
         
