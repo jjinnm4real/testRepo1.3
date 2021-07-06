@@ -20,7 +20,7 @@ pipeline{
         
         stage ('Dir GitHub Local Repo Files') {
             steps {
-                dir("testRepo_v1.3/MICA L0 Test1") {
+                dir("testRepo_v1.3/MICA L0 Test1/") {
                     sh "dir.bat"
                 }    
                 
