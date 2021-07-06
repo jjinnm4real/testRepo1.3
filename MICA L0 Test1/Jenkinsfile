@@ -6,7 +6,7 @@ pipeline{
                 deleteDir()
             }            
         }
-        stage ('Clone Repo'){
+        stage ('Clone GitHub Repo'){
             steps {
                 sh "git clone https://github.com/jjinnm4real/testRepo_v1.3.git"
                     
