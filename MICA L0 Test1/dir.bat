@@ -1,1 +1,1 @@
-sh dir
+dir
