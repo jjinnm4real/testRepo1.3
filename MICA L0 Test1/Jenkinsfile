@@ -25,6 +25,7 @@ pipeline{
                 }    
                 dir("testRepo_v1.3/MICA L0 Test1"){    
                     echo "I want to do a dir here"
+                   sh dir
                     
                 }  
             }
