@@ -18,16 +18,21 @@ pipeline{
             }
         }    
         
-        stage ('Build') {
+        stage ('Dir GitHub Local Repo Files') {
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1") {
-                    echo "v1.3 - MICA L0 Test1"
+                    echo "GitHub v1.3 - MICA L0 Test1"
                 }  
-                    
-
-                
             }
         }
+        stage ('Dir Bitbucket Local Repo Files') {
+            steps {
+                dir("v1.3_coderepo") {
+                    echo "Bitbucket v1.3 - MICA L0 Test1"
+                }  
+            }
+        }
+        
         
     }
     
