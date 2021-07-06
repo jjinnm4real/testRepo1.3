@@ -23,7 +23,7 @@ pipeline{
                 dir("testRepo_v1.3/MICA L0 Test1") {
                     echo "GitHub v1.3 - MICA L0 Test1"
                 }    
-                dir("testRepot_v1.3/MICA L0 Test1"){    
+                dir("testRepo_v1.3/MICA L0 Test1"){    
                     sh "dir"
                 }  
             }
