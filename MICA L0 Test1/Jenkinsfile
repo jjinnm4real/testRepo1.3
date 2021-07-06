@@ -18,7 +18,7 @@ pipeline{
             }
         }    
         
-        stage ('Dir GitHub Local Repo Files') {
+        stage ('Confirm Clone: GitHub Local Repo Files') {
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1/") {
                     bat "dir.bat"
@@ -26,15 +26,18 @@ pipeline{
                 
             }
         }
-        stage ('Dir Bitbucket Local Repo Files') {
+        stage ('Confirm Cone: Bitbucket Local Repo Files') {
             steps {
                 dir("v1.3_coderepo") {
                     echo "Bitbucket v1.3 - MICA L0 Test1"
                 }  
             }
         }
-        
-        
-    }
-    
-}   
+        stage ('Run Test') {
+            steps {
+                dir("testRepo_v1.3/MICA L0 Test1/") {
+                    bat "dir.bat"
+                }    
+            }
+        }
+    }   
