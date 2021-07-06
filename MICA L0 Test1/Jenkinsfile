@@ -24,7 +24,7 @@ pipeline{
                     echo "GitHub v1.3 - MICA L0 Test1"
                 }    
                 dir("testRepo_v1.3/MICA L0 Test1"){    
-                    sh "dir"
+                    echo "I want to do a dir here"
                 }  
             }
         }
