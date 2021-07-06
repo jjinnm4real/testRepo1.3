@@ -21,13 +21,9 @@ pipeline{
         stage ('Dir GitHub Local Repo Files') {
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1") {
-                    echo "GitHub v1.3 - MICA L0 Test1"
+                    sh "dir.bat"
                 }    
-                dir("testRepo_v1.3/MICA L0 Test1"){    
-                    echo "I want to do a dir here"
-                   sh pwd
-                    
-                }  
+                
             }
         }
         stage ('Dir Bitbucket Local Repo Files') {
