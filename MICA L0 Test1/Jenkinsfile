@@ -6,19 +6,7 @@ pipeline{
                 deleteDir()
             }            
         }
-        stage ('Clone GitHub Repo'){
-            steps {
-                sh "git clone https://github.com/jjinnm4real/testRepo_v1.3.git"
-                echo "GitHub v1.3 - MICA Test1 cloned"
-                    
-            }
-        }
-        stage ('Clone Bitbucket Repo'){
-            steps {
-                sh "git clone https://jedmister@bitbucket.org/jedmister/v1.3_coderepo.git"
-                 echo "Bitbucket v1.3 - MICA L0 Test1 cloned"
-            }
-        }    
+       
         
         stage ('Run Test') {
             steps {
