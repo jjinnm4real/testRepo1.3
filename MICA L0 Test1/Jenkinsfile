@@ -22,6 +22,7 @@ pipeline{
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1") {
                     echo "GitHub v1.3 - MICA L0 Test1"
+                    sh "dir"
                 }  
             }
         }
