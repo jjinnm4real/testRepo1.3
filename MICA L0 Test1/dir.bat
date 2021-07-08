@@ -1,1 +1,1 @@
-dir J*
+echo "echo worked"
