@@ -23,7 +23,7 @@ pipeline{
         stage ('Run Test') {
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1/") {
-                    bat "dir.bat"
+                    sh 'python.exe is_even.py 2 1'
                 }    
             }
         }
