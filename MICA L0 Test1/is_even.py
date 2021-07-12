@@ -1,4 +1,4 @@
-import sys, time
+import sys, time, os
 import json
 
     
@@ -20,6 +20,11 @@ data['people'].append({
     'website': 'apple.com',
     'from': 'Alabama'
 })
+
+cwd=os.getcwd()
+
+print("Current working directory is: {0}".format(cwd))
+
 
 with open('cucumber.json', 'w') as outfile:
     json.dump(data, outfile)
