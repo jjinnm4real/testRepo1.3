@@ -25,4 +25,5 @@ with open('cucumber.json', 'w') as outfile:
     json.dump(data, outfile)
 
 print("The Array is: ", data)    
+print("Array file is: ", outfile)
     
