@@ -29,10 +29,13 @@ pipeline{
         }
         stage('Generate HTML Reports') {
             steps {
+                dir("testRepo_v1.3/MICA L0 Test1/") {
+                    echo "Directory set to htmlreports"
+                {    
                 publishHTML (target : [allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: '\testRepo_v1.3\MICA L0 Test1\htmlreports',
+                    reportDir: 'htmlreports',
                     reportFiles: 'myreport.html',
                     reportName: 'My Reports',
                     reportTitles: 'The Report'])
