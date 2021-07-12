@@ -22,4 +22,7 @@ data['people'].append({
 })
 
 with open('data.txt', 'w') as outfile:
-    json.dump(data, outfile)    
+    json.dump(data, outfile)
+
+print("The Array is: ", data)    
+    
