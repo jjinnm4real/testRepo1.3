@@ -29,11 +29,8 @@ pipeline{
         }
         stage ('Generate HTML Reports') {
             steps {
-                dir("/"){
-                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, includes: '**/*', keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Index'])
-                
-                }
-            }    
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, includes: '**/*', keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Index'])
+           }    
         }    
     }    
 }   
