@@ -14,13 +14,7 @@
           "name":"Detection Content Behavior during processing of Transient Detection",
           "line":62,
           "description":"",
-          "tags":[
-            {
-              "line":62,
-              "name":"@T19389.01"
-            }
-          ],
-          "keyword":"Scenario",
+                    "keyword":"Scenario",
           "type":"scenario",
           "steps":[
             {
