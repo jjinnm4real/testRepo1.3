@@ -24,6 +24,7 @@ pipeline{
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1/") {
                     sh 'python.exe is_even.py 2 1'
+                    sh 'mkdir html'
                 }    
             }
         }
