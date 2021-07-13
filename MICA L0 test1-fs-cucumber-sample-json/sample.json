@@ -28,7 +28,7 @@
             },
             {
               "keyword":"Given",
-              "name":"the Environment Core Functionality test has been run",
+              "name":"echo has been run",
               "line":16,
               "result":{
                 "status":"passed"
