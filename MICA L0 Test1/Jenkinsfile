@@ -24,7 +24,7 @@ pipeline{
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1/") {
                     sh 'python.exe is_even.py 2 1'
-                    sh "mkdir reports"
+                    
                    
                 }    
             }
@@ -37,7 +37,7 @@ pipeline{
                     publishHTML (target : [allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'reports',
+                    reportDir: '',
                     reportFiles: 'myreport.html',
                     reportName: 'My Reports',
                     reportTitles: 'The Report'])
