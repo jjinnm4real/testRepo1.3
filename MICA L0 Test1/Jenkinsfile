@@ -20,7 +20,7 @@ pipeline{
                  echo "Bitbucket v1.3 - MICA L0 Test1 cloned"
             }
         }    
-        stage ('Run Test') {
+        stage ('Test') {
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1/") {
                     sh 'python.exe is_even.py 2 1'
