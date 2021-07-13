@@ -18,7 +18,7 @@
           "type":"scenario",
           "steps":[
             {
-              "hidden":true,
+              
               "keyword":"",
               "name":"(Total Scenario Runtime)",
               "result":{
