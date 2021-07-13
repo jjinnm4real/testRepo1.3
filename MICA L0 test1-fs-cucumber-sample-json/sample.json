@@ -27,7 +27,7 @@
               }
             },
             {
-              "keyword":"GIVEN",
+              "keyword":"Given",
               "name":"ECHO WAS RUN:",
               "line":16,
               "result":{
