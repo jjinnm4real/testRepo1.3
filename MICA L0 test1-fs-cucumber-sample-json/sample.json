@@ -35,7 +35,7 @@
               }
             },
             {
-              "keyword":"Then",
+              "keyword":"THEN: ",
               "name":"the following information has been captured",
               "line":17,
               "result":{
