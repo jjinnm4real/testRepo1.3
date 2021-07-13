@@ -28,5 +28,10 @@ pipeline{
                 }    
             }
         }
+        stage ('Generate HTML Report') {
+            steps {
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'v1.3 MICA L0 Test1 HTML'])
+            }    
+        }    
     }    
 }   
