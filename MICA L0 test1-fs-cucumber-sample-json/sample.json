@@ -1,4 +1,25 @@
-{
+[
+  {
+    "uri":"../../../ascldap/users/juribe/TestCases/Transient_Event_Proc/Concurrency_IAWS_Segment_SF3_SF4_SF11.feature",
+    "keyword":"Feature",
+    "id":"04e1b81b19f145469b6c6efa08e1a50e",
+    "name":"Concurrency_IAWS_Segment Behavior Test for SF3, SF4 and SF11 -- T2DAW_Events",
+    "description":"",
+    "tags":[
+      
+    ],
+    "elements":[
+      {
+        "id":"7461485df4984e7fabaa3dd9c7a38fb5",
+        "name":"Detection Content Behavior during processing of Transient Detection",
+        "line":62,
+        "description":"",
+        "tags":[
+          {
+            "line":62,
+            "name":"@T19389.01"
+          },
+          {
             "line":62,
             "name":"@T19389.02"
           },
@@ -62,3 +83,540 @@
             "line":62,
             "name":"@T19098.01"
           }
+        ],
+        "keyword":"Scenario",
+        "type":"scenario",
+        "steps":[
+          {
+            "hidden":true,
+            "keyword":"",
+            "name":"(Total Scenario Runtime)",
+            "result":{
+              "status":"passed",
+              "duration":0.0
+            }
+          },
+          {
+            "keyword":"Given",
+            "name":"the Environment Core Functionality test has been run",
+            "line":16,
+            "result":{
+              "status":"passed"
+            }
+          },
+          {
+            "keyword":"Then",
+            "name":"the following information has been captured",
+            "line":17,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Metadata"
+                ]
+              },
+              {
+                "cells":[
+                  "Cloud Resources Accessed"
+                ]
+              },
+              {
+                "cells":[
+                  "Docker Image Hash"
+                ]
+              },
+              {
+                "cells":[
+                  "Docker Image Tag"
+                ]
+              },
+              {
+                "cells":[
+                  "Helm Chart Version"
+                ]
+              },
+              {
+                "cells":[
+                  "Test Harness Names and Versions"
+                ]
+              },
+              {
+                "cells":[
+                  "Emulator Names and Versions"
+                ]
+              },
+              {
+                "cells":[
+                  "Comparator Names and Versions"
+                ]
+              },
+              {
+                "cells":[
+                  "ROCK Capture/Validator Tool and Version"
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"Given",
+            "name":"Transient_Event_Processor is Up",
+            "line":63,
+            "result":{
+              "status":"passed"
+            }
+          },
+          {
+            "keyword":"When",
+            "name":"Transient_Detection_DWs and Stream_Info from 6 concurrent data streams for the T2DAW_Events are flowed from the TBA through Transient_Event_Processor",
+            "line":64,
+            "result":{
+              "status":"passed"
+            }
+          },
+          {
+            "keyword":"And",
+            "name":"the Transient_Detection_DW has the following attributes",
+            "line":66,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Attribute",
+                  "Expected Value",
+                  "Actual Value"
+                ]
+              },
+              {
+                "cells":[
+                  "input_data_info",
+                  "OpgaHeader.msgVersionMajor",
+                  "MAX_VAL",
+                  19
+                ]
+              },
+              {
+                "cells":[
+                  "input_data_info",
+                  "OpgaHeader.msgVersionMinor",
+                  "MAX_VAL",
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"the Transient_Detection_DW and Stream_Info are in accordance to specifications",
+            "line":71,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Conforms to Spec",
+                  "Expected Value",
+                  "Actual Value"
+                ]
+              },
+              {
+                "cells":[
+                  "TransientDetectionDw",
+                  "Descriptive Word Data Specification",
+                  "TRUE",
+                  "passed"
+                ]
+              },
+              {
+                "cells":[
+                  "StreamInfo",
+                  "OMP Internal Data Specification",
+                  "TRUE",
+                  "passed"
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"Then",
+            "name":"the output of the Transient_Event_Processor contains an initial Transient_2D_AW segment for every event",
+            "line":77,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Field .status Has Value",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "TRANSIENT_2D_AW_SEGMENT_INITIAL_count",
+                  "SEGMENT_INITIAL",
+                  "100",
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"an early noise discrimination Classification AW for every event",
+            "line":81,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "early_CAW_count",
+                  "100",
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"an intermediate Transient_2D_AW for every event",
+            "line":85,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Field .status Has Value",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "TRANSIENT_2D_AW_SEGMENT_EXTENDED_count",
+                  "SEGMENT_EXTENDED",
+                  ">= 100",
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"a final Transient_2D_AW for every event",
+            "line":89,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Field .status Has Value",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "TRANSIENT_2D_AW_SEGMENT_TERMINATED_count",
+                  "SEGMENT_TERMINATED",
+                  "100",
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"a complete Transient_2D_AW for every event",
+            "line":93,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Field .status Has Value",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "TRANSIENT_2D_AW_ENTIRE_EVENT_count",
+                  "ENTIRE_EVENT",
+                  "100",
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"all intermediate Classification AWs for every event",
+            "line":97,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Name",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "CLASSIFICATION_AW_count",
+                  "biu",
+                  "100",
+                  100
+                ]
+              },
+              {
+                "cells":[
+                  "CLASSIFICATION_AW_count",
+                  "oscar",
+                  "100",
+                  100
+                ]
+              },
+              {
+                "cells":[
+                  "CLASSIFICATION_AW_count",
+                  "snl_subclass",
+                  "100",
+                  100
+                ]
+              },
+              {
+                "cells":[
+                  "CLASSIFICATION_AW_count",
+                  "oscar_lp",
+                  "100",
+                  100
+                ]
+              },
+              {
+                "cells":[
+                  "CLASSIFICATION_AW_count",
+                  "biu_lp",
+                  "100",
+                  100
+                ]
+              },
+              {
+                "cells":[
+                  "CLASSIFICATION_AW_count",
+                  "vmet",
+                  "100",
+                  100
+                ]
+              },
+              {
+                "cells":[
+                  "CLASSIFICATION_AW_count",
+                  "noise_discriminator",
+                  "100",
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"a final classification AW for every event",
+            "line":107,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "final_CAW_count",
+                  "100",
+                  100
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"all initial Transient_2D_AWs contain at least one second of data from any detecting data stream",
+            "line":111,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Name",
+                  "Expected Value",
+                  "max",
+                  "min"
+                ]
+              },
+              {
+                "cells":[
+                  "segment_correctness",
+                  "initial_segment_duration",
+                  "=> 1 second",
+                  1.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"all intermediate Transient_2D_AWs contains at least 5 seconds of data from any detecting data stream",
+            "line":115,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Name",
+                  "Expected Value",
+                  "max",
+                  "min"
+                ]
+              },
+              {
+                "cells":[
+                  "segment_correctness",
+                  "extended_segment_duration",
+                  "=> 5 seconds",
+                  4.799999952316284,
+                  4.0
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"the number of events containing spatiotemporally uncorrelated points is zero",
+            "line":119,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "events_containing_spatiotemporally_uncorrelated_points",
+                  "0",
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"the number of spatiotemporally overlapping events is zero",
+            "line":122,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Expected Count",
+                  "Actual Count"
+                ]
+              },
+              {
+                "cells":[
+                  "spatiotemporally_overlapping_event_pairs",
+                  "0",
+                  0
+                ]
+              }
+            ]
+          },
+          {
+            "keyword":"And",
+            "name":"all the outputs are verified using validator tool to be in accordance with specification",
+            "line":125,
+            "result":{
+              "status":"passed"
+            },
+            "rows":[
+              {
+                "cells":[
+                  "Category",
+                  "Conforms to Spec",
+                  "Expected Value",
+                  "Actual Value"
+                ]
+              },
+              {
+                "cells":[
+                  "Transient_2D_AW",
+                  "Analysis Word Data Specification",
+                  "TRUE",
+                  "passed"
+                ]
+              },
+              {
+                "cells":[
+                  "ClassificationAw",
+                  "Analysis Word Data Specification",
+                  "TRUE",
+                  "passed"
+                ]
+              },
+              {
+                "cells":[
+                  "Transient_Extraction_Request",
+                  "OMP Internal Data Specification",
+                  "TRUE",
+                  "passed"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
