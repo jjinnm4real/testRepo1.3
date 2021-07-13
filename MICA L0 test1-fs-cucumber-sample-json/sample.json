@@ -11,16 +11,16 @@
       "elements":[
         {
           "id":"7461485df4984e7fabaa3dd9c7a38fb5",
-          "name":"v1.3 MICA L0 Test 1",
+          "name":"Detection Content Behavior during processing of Transient Detection",
           "line":62,
           "description":"",
                     "keyword":"Scenario",
           "type":"scenario",
           "steps":[
             {
-              
+              "hidden":true,
               "keyword":"",
-              "name":"(Total Scenario Runtime)",
+              "name":"",
               "result":{
                 "status":"passed",
                 "duration":0.0
@@ -28,7 +28,7 @@
             },
             {
               "keyword":"Given",
-              "name":"dir command was issued:",
+              "name":"Echo was run",
               "line":16,
               "result":{
                 "status":"passed"
@@ -91,7 +91,7 @@
             },
             {
               "keyword":"Given",
-              "name":"The echo command was issued",
+              "name":"Transient_Event_Processor is Up",
               "line":63,
               "result":{
                 "status":"passed"
@@ -99,7 +99,7 @@
             },
             {
               "keyword":"When",
-              "name":"Echo"
+              "name":"Transient_Detection_DWs and Stream_Info from 6 concurrent data streams for the T2DAW_Events are flowed from the TBA through Transient_Event_Processor",
               "line":64,
               "result":{
                 "status":"passed"
