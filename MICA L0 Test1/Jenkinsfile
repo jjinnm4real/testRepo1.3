@@ -24,15 +24,16 @@ pipeline{
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1/") {
                     sh 'python.exe is_even.py 2 1'
+                    dir("testRepo_v1.3/MICA L0 Test1") {
+                    sh "mkdir reports"
                    
                 }    
             }
         }
         stage ('Generate HTML Report') {
             steps {
-                dir("testRepo_v1.3/MICA L0 Test1") {
-                    sh "mkdir reports"
-                }    
+                
+                    
                 dir("testRepo_v1.3/MICA L0 Test1") {
                     publishHTML (target : [allowMissing: false,
                     alwaysLinkToLastBuild: true,
