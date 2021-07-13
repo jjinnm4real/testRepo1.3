@@ -18,7 +18,13 @@ pipeline{
                 dir("testRepo_v1.3/MICA L0 Test1") {
                      sh 'python.exe is_even.py 3 1'
                 }  
-                    
+        stage ('Generate HTML Reports') {
+            steps {
+                dir("testRepo_v1.3/MICA L0 Test2/"){
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Index'])
+                }
+            }    
+        }                
 
                 
             }
