@@ -33,7 +33,7 @@ pipeline{
             steps {
                 
                     
-                dir("C:\Users\jledmis\.jenkins\workspace\v1.3\v1.3-MICA L0-Test1") {
+                dir("testRepo_v1.3/MICA L0 Test1/") {
                     publishHTML (target : [allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
