@@ -31,13 +31,7 @@ pipeline{
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1/") {
                     echo "Directory set to htmlreports"
-                    publishHTML (target : [allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'htmlreports',
-                    reportFiles: 'myreport.html',
-                    reportName: 'My Reports',
-                    reportTitles: 'The Report'])
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Index'])
                 }    
                     
             }
