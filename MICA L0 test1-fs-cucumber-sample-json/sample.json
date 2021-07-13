@@ -13,14 +13,14 @@
           "id":"7461485df4984e7fabaa3dd9c7a38fb5",
           "name":"v1.3 MICA L0 Test 1",
           "line":62,
-          "description":" ",
+          "description":"",
           "keyword":"Scenario",
           "type":"scenario",
           "steps":[
             {
               "hidden":true,
               "keyword":"",
-              "name":"",
+              "name":" ",
               "result":{
                 "status":"passed",
                 "duration":0.0
