@@ -28,7 +28,7 @@
             },
             {
               "keyword":"GIVEN",
-              "name":"ECHO WAS RUN",
+              "name":"ECHO WAS RUN:",
               "line":16,
               "result":{
                 "status":"passed"
