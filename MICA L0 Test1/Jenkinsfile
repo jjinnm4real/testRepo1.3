@@ -30,6 +30,7 @@ pipeline{
         }
         stage ('Generate HTML Report') {
             steps {
+                sh "pwd"
                 publishHTML (target : [allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
