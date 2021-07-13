@@ -28,7 +28,7 @@
             },
             {
               "keyword":"Given",
-              "name":"echo has been run",
+              "name":"dir command was issued:",
               "line":16,
               "result":{
                 "status":"passed"
@@ -91,7 +91,7 @@
             },
             {
               "keyword":"Given",
-              "name":"Transient_Event_Processor is Up",
+              "name":"The echo command was issued",
               "line":63,
               "result":{
                 "status":"passed"
@@ -99,7 +99,7 @@
             },
             {
               "keyword":"When",
-              "name":"Transient_Detection_DWs and Stream_Info from 6 concurrent data streams for the T2DAW_Events are flowed from the TBA through Transient_Event_Processor",
+              "name":"Echo"
               "line":64,
               "result":{
                 "status":"passed"
