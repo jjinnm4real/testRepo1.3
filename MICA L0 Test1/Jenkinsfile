@@ -29,20 +29,7 @@ pipeline{
                 }    
             }
         }
-        stage ('Generate HTML Report') {
-            steps {
-                
-                    
-                dir("testRepo_v1.3/MICA L0 Test1/") {
-                    publishHTML (target : [allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: '',
-                    reportFiles: 'myreport.html',
-                    reportName: 'My HTML Report',
-                    reportTitles: 'The Report'])
-                }    
-            }    
-        }    
+        
+            
     }   
 }   
