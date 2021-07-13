@@ -31,6 +31,7 @@ pipeline{
         stage ('Generate HTML Report') {
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1") {
+                    sh "mkdir reports",
                     publishHTML (target : [allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
