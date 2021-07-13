@@ -20,7 +20,7 @@
             {
               "hidden":true,
               "keyword":"",
-              "name":" ",
+              "name":"(Total Scenario Runtime)",
               "result":{
                 "status":"passed",
                 "duration":0.0
