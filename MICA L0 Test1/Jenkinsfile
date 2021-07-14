@@ -33,8 +33,7 @@ pipeline{
     }
     post {
         always {
-            sh "pwd'
-            junit 'build/reports/**/*.xml'
+            junit 'output.xml'
         }
     }
 }   
