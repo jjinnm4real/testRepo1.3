@@ -33,7 +33,7 @@ pipeline{
     }
     post {
         always {
-            junit 'output.xml'
+            junit '\testRepo_v1.3\MICA L0 Test1\output.xml'
         }
     }
 }   
