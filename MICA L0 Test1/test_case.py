@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, time
 from junit_xml import TestSuite, TestCase
 
 test_cases = [TestCase('Test1', 'some.class.name', 123.345, 'I am stdout!', 'I am stderr!')]
