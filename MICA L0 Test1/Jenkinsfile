@@ -24,7 +24,7 @@ pipeline{
             steps {
                 dir("testRepo_v1.3/MICA L0 Test1/") {
                     sh 'pwd'
-                    sh 'python test_case.py'
+                    sh 'python test_sample.py'
                     
                    
                 }    
