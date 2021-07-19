@@ -24,6 +24,7 @@ pipeline{
     post {
         always {
             cucumber 'testRepo_v1.3/MICA L0 Test2/cucumber.json'
+            sh "pwd"
             
         }    
     }     
