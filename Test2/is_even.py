@@ -27,7 +27,7 @@ print("Current working directory is: {0}".format(cwd))
 
 
 with open('cucumber.json', 'w') as outfile:
-    json.dump(data, outfile)
+    json.dump(data, indent=4, outfile)
 
 print("The Array is: ", data)    
 print("Array file is: ", outfile)
