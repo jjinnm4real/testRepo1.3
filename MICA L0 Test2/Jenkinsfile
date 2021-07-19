@@ -24,6 +24,7 @@ pipeline{
             
             steps {
                 echo "Publish Reports"
+                jsonReportDirectory: "testRepo_v1.3/MICA L0 Test2"
                 
             }    
         }
