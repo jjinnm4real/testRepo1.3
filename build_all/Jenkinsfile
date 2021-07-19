@@ -7,11 +7,16 @@ pipeline{
             }            
         }
         
-      stage ('Start Test1 Pipeline') {
+        stage ('Start Test1 Pipeline') {
             steps {
                 build job: 'Test1', propagate: true, wait: true
             }
         }
+        stage ('Start Test2 Pipeline') {
+            steps {
+                build job: 'Test2', propagate: true, wait: true
+        }
+      
       
     }          
   
