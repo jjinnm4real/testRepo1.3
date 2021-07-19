@@ -23,7 +23,7 @@ pipeline{
     }
     post {
         always {
-            fileIncludePattern: "**/cucumber.json"
+            cucumber '**/cucumber.json'
             
         }    
     }     
