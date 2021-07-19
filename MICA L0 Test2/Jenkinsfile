@@ -33,7 +33,9 @@ pipeline{
                             'values': 'Firefox'
                         ]
                     ]
-                echo "CUCUMBER tests report: ${BUILD_URL}cucumber-html-reports_53e47127-7e8c-38f4-bc2a-429191699127/overview-features.html"
+                dir('C:\Users\jledmis\.jenkins\jobs\v1.3\jobs\v1.3-MICA L0-Test2\builds\12\cucumber-html-reports_53e47127-7e8c-38f4-bc2a-429191699127') {
+                    echo "CUCUMBER tests report: ${BUILD_URL}cucumber-html-reports_53e47127-7e8c-38f4-bc2a-429191699127/overview-features.html"
+                {    
             }
         }    
                 
