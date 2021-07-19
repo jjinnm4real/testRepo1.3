@@ -15,7 +15,9 @@ pipeline{
         
         stage ('Build') {
             steps {
-                sh "python.exe is_even.py 3 1"
+                dir('testRepo_v1.3/Test2') {
+                    sh "python.exe is_even.py 3 1"
+                }    
                  
             }        
         }
