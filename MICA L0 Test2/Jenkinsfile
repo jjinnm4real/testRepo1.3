@@ -15,7 +15,7 @@ pipeline{
         
         stage ('Build') {
             steps {
-                dir("test2/MICA L0 Test2") {
+                dir("testRepo_v1.3/MICA L0 Test2") {
                      sh 'python.exe is_even.py 3 1'
                 } 
             }        
