@@ -1,0 +1,33 @@
+import sys, time, os
+import json
+
+    
+
+data = {}
+data['people'] = []
+data['people'].append({
+    'name': 'Scott',
+    'website': 'stackabuse.com',
+    'from': 'Nebraska'
+})
+data['people'].append({
+    'name': 'Larry',
+    'website': 'google.com',
+    'from': 'Michigan'
+})
+data['people'].append({
+    'name': 'Tim',
+    'website': 'apple.com',
+    'from': 'Alabama'
+})
+
+cwd=os.getcwd()
+
+print("Current working directory is: {0}".format(cwd))
+
+
+with open('cucumber.json', 'w') as outfile:
+    json.dump(data, outfile)
+
+print("The Array is: ", data)    
+print("Array file is: ", outfile)
