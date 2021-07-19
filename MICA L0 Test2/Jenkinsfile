@@ -28,7 +28,7 @@ pipeline{
                 failedScenariosNumber: 0,
                 failedStepsNumber: 0,
                 fileExcludePattern: ‘’,
-                fileIncludePattern: '/*.json’,
+                fileIncludePattern: '**/cucumber.json’,
                 jsonReportDirectory: ‘testRepo_v1.3\MICA L0 Test2’,
                 parallelTesting: true,
                 pendingStepsNumber: 0,
