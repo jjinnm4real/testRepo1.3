@@ -22,9 +22,8 @@ pipeline{
         }
         stage('Publish Reports') {
             steps {
-                dir("Test2/MICA L0 Test2/") {
-                    echo "Set dir"
-                }    
+                sh "pwd"
+                
                 
                 
             }    
