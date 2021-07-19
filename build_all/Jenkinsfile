@@ -22,7 +22,7 @@ pipeline{
             steps {
                 cucumber buildStatus: 'SUCCESS',
                 reportTitle: 'My Report',
-                fileIncludePattern: '**/build_all*.json',
+                fileIncludePattern: '**/*.json',
                 trendsLimit: 10,
                 classifications: [
                     [
