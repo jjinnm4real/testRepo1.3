@@ -20,14 +20,27 @@ pipeline{
             }        
         }
         stage('Publish Reports') {
+            
             steps {
-                dir("testRepo_v1.3/MICA L0 Test2") {
-                    sh "pwd"
-                }    
-                
-                
-                
+                ([
+                    $class: ‘CucumberReportPublisher’,
+                    failedFeaturesNumber: 0,
+                    failedScenariosNumber: 0,
+                    failedStepsNumber: 0,
+                    fileExcludePattern: ‘’,
+                    fileIncludePattern: '**/cucumber.json’,
+                    parallelTesting: true,
+                    pendingStepsNumber: 0,
+                    skippedStepsNumber: 0,
+                    trendsLimit: 0,
+                    undefinedStepsNumber: 0,
+                    classifications: runClassifications
+                ])
             }    
+                
+                
+                
+        
         }
     }
     
