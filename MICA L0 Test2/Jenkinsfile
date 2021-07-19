@@ -21,7 +21,7 @@ pipeline{
             }        
         }
         stage('Publish Reports') {
-            echo "***** Publish Reports ***"
+            
             steps {
                 echo "Publish Reports"
                 
