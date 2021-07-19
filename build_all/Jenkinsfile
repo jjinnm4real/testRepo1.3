@@ -9,9 +9,7 @@ pipeline{
         
       stage ('Start Test1 Pipeline') {
             steps {
-                build job: 'Test1', parameters: [
-                string(name: 'param1', value: "value1")
-                ]
+                build job: 'Test1', propagate: true, wait: true
             }
         }
       
