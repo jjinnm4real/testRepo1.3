@@ -21,17 +21,22 @@ pipeline{
                  
             }        
         }
+        stage ('Generate HTML Report') {
+            cucumber buildStatus: 'UNSTABLE',
+                reportTitle: 'My Report',
+                fileIncludePattern: '**/*.json',
+                trendsLimit: 10,
+                classifications: [
+                    [
+                        'key': 'Browser',
+                        'values': 'Firefox'
+                    ]
+                ]
+        }    
+                
         
     }
-    post {
-        always {
-            dir('testRepo_v1.3/Test2') {
-                
-                sh "pwd"
-                cucumber '**/*.json'
-            }    
-            
-        }    
-    }     
+    
+      
     
 }   
