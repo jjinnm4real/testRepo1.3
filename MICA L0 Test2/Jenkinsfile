@@ -22,7 +22,9 @@ pipeline{
         }
         stage('Publish Reports') {
             steps {
-                dir("testRepo_v1.3/MICA L0 Test1/") 
+                dir("testRepo_v1.3/MICA L0 Test1/") {
+                    echo "Set dir"
+                }    
                 
                 
             }    
