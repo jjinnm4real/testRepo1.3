@@ -28,6 +28,7 @@ pipeline{
             dir('testRepo_v1.3/Test2') {
                 cucumber 'testRepo_v1.3/Test2/cucumber.json'
                 sh "pwd"
+                cucumber '**/cucumber.json'
             }    
             
         }    
