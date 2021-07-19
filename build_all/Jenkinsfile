@@ -18,21 +18,10 @@ pipeline{
             }
         }    
       
-        stage ('Generate Cucumber Report') {
+        stage ('Close Out') {
             steps {
-                dir("testRepo_v1.3/v1.3-build-all-tests/") {
-                    cucumber buildStatus: 'SUCCESS',
-                    reportTitle: 'My Report',
-                    fileIncludePattern: '**/*.json',
-                    trendsLimit: 10,
-                    classifications: [
-                        [
-                            'key': 'Browser',
-                            'values': 'Firefox'
-                        ]
-                    ]
-                    echo "CUCUMBER tests report: ${BUILD_URL}cucumber-reports_53e47127-7e8c-38f4-bc2a-429191699127"
-                }
+                echo "See individual tests for Cucumber Reports"
+            
             }    
         }    
     }          
