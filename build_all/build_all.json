@@ -3,7 +3,7 @@
       "uri":"../../../ascldap/users/juribe/TestCases/Transient_Event_Proc/Concurrency_IAWS_Segment_SF3_SF4_SF11.feature",
       "keyword":"Feature",
       "id":"04e1b81b19f145469b6c6efa08e1a50e",
-      "name":"Test2",
+      "name":"build_all",
       "description":"",
       "tags":[
         
@@ -11,7 +11,7 @@
       "elements":[
         {
           "id":"7461485df4984e7fabaa3dd9c7a38fb5",
-          "name":"Test2",
+          "name":"build_all",
           "line":62,
           "description":"",
           "keyword":"Scenario",
