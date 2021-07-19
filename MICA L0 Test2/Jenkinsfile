@@ -23,19 +23,8 @@ pipeline{
         stage('Publish Reports') {
             echo "***** Publish Reports ***"
             steps {
-                ([
-                    $class: ‘CucumberReportPublisher’,
-                    failedFeaturesNumber: 0,
-                    failedScenariosNumber: 0,
-                    failedStepsNumber: 0,
-                    jsonReportDirectory: "testRepo_v1.3/MICA L0 Test1",
-                    parallelTesting: true,
-                    pendingStepsNumber: 0,
-                    skippedStepsNumber: 0,
-                    trendsLimit: 0,
-                    undefinedStepsNumber: 0,
-                    classifications: runClassifications
-                ])
+                echo "Publish Reports"
+                
             }    
         }
     }
