@@ -15,18 +15,31 @@ pipeline{
         
         stage ('Build') {
             steps {
-                sh "pwd"
+                dir('testRepo_v1.3/MICA L0 Test2') {
+                    sh "python.exe hello_world.py"
+                }    
                  
             }        
         }
-        stage('Publish Reports') {
+        stage ('Generate Cucumber Report') {
             steps {
-                sh "pwd"
+                    cucumber buildStatus: 'SUCCESS',
+                    reportTitle: 'My Report',
+                    fileIncludePattern: '**/MICA_L0-Test2*.json',
+                    trendsLimit: 10,
+                    classifications: [
+                        [
+                            'key': 'Browser',
+                            'values': 'Firefox'
+                        ]
+                    ]
+                echo "CUCUMBER tests report: ${BUILD_URL}cucumber-html-reports_53e47127-7e8c-38f4-bc2a-429191699127/overview-features.html"
+            }
+        }    
                 
-                
-                
-            }    
-        }
+        
     }
+    
+      
     
 }   
