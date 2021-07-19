@@ -21,7 +21,7 @@ pipeline{
                  
             }        
         }
-        stage ('Generate HTML Report') {
+        stage ('Generate Cucumber Report') {
             steps {
                     cucumber buildStatus: 'SUCCESS',
                     reportTitle: 'My Report',
