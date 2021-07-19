@@ -20,7 +20,7 @@ pipeline{
                 } 
             }        
         }
-        stage(“Publish Reports”) {
+        stage('Publish Reports') {
             echo "***** Publish Reports ***"
             step([
                 $class: ‘CucumberReportPublisher’,
