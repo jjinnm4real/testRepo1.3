@@ -17,7 +17,7 @@ pipeline{
         stage ('Clone Bitbucket Repo'){
             steps {
                 sh "git clone https://jedmister@bitbucket.org/jedmister/v1.3_coderepo.git"
-                 echo "Bitbucket v1.3 - MICA L0 Test1 cloned"
+                 echo "Bitbucket v1.3 - codeRepo cloned"
             }
         }    
         stage ('Test') {
