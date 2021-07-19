@@ -15,7 +15,8 @@ pipeline{
         stage ('Start Test2 Pipeline') {
             steps {
                 build job: 'Test2', propagate: true, wait: true
-        }
+            }
+        }    
       
       
     }          
