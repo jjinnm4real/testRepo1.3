@@ -21,7 +21,9 @@ pipeline{
         }
         stage('Publish Reports') {
             steps {
-                sh "pwd"
+                dir("testRepo_v1.3\MICA L0 Test2") {
+                    sh "pwd"
+                }    
                 
                 
                 
