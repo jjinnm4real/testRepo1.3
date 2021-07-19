@@ -22,10 +22,7 @@ pipeline{
         }
     }
     post {
-        always {
-            dir("testRepo_v1.3/MICA L0 Test2/"){
-                cucumber '**/cucumber.json'
-            }
-        }
+        always 
+            cucumber '**/cucumber.json'
     }    
 }   
