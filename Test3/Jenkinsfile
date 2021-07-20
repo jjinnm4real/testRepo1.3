@@ -26,7 +26,7 @@ pipeline{
             steps {
                     cucumber buildStatus: 'SUCCESS',
                     reportTitle: 'My Report',
-                    fileIncludePattern: '**/test3*.json',
+                    fileIncludePattern: '**/behave*.json',
                     trendsLimit: 10,
                     classifications: [
                         [
