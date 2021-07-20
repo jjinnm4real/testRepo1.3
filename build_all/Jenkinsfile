@@ -21,8 +21,7 @@ pipeline{
         stage ('Close Out') {
             steps {
                 echo "See individual tests for Cucumber Reports"
-                echo "CUCUMBER tests report: ${BUILD_URL}"
-                echo "CUCUMBER tests report: ${BUILD_URL}cucumber-html-reports_53e47127-7e8c-38f4-bc2a-429191699127/overview-features.html"
+                
             
             }    
         }    
