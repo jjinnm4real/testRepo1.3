@@ -17,7 +17,7 @@ pipeline{
         stage ('Build') {
             steps {
                 dir('testRepo_v1.3/Test3') {
-                    sh "python.exe hello_world.py"
+                    sh "python.exe create_json.py"
                 }    
                  
             }        
